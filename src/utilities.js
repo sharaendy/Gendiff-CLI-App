@@ -8,7 +8,7 @@ function getFilePath(file) {
 
 // возвращает содержимое файла
 function getFileContent(file) {
-  return readFileSync(getFilePath(file), 'utf-8')
+  return readFileSync(getFilePath(file), 'utf-8');
 }
 
 // вовзращает формат файла без точки
@@ -17,6 +17,3 @@ function getFileFormat(filePath) {
 }
 
 export { getFileContent, getFileFormat };
-
-// console.log(getFilePath('file1.json'))
-// console.log(JSON.parse(getFileContent('file1.json')))

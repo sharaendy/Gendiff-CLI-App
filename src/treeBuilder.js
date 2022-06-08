@@ -1,16 +1,25 @@
 import _ from 'lodash';
 
-export default function treeGenerator(file1, file2) {
+function treeGenerator(file1, file2) {
   const file1Keys = Object.keys(file1);
   const file2Keys = Object.keys(file2);
   const commonKeys = _.union(file1Keys, file2Keys);
+  const commonSortedKeys = _.sortBy(commonKeys);
 
-  return commonKeys.map((key) => {
+  return commonSortedKeys.map((key) => {
     const value1 = file1[key];
     const value2 = file2[key];
 
+    if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
+      return {
+        key,
+        type: 'nested',
+        children: treeGenerator(value1, value2),
+      };
+    }
+
     if (!Object.prototype.hasOwnProperty.call(file2, key)) {
-      // если ключа нет во 2-ом файле
+      // если нет ключа во 2-ом файле
       return {
         key,
         type: 'deleted',
@@ -19,7 +28,7 @@ export default function treeGenerator(file1, file2) {
     }
 
     if (!Object.prototype.hasOwnProperty.call(file1, key)) {
-      // если ключа нет в 1-ом файле
+      // если нет ключа в 1-ом файле
       return {
         key,
         type: 'added',
@@ -44,4 +53,6 @@ export default function treeGenerator(file1, file2) {
   });
 }
 
-// console.log(treeGenerator(file1, file2));
+export default function treeBuilder(file1, file2) {
+  return { type: 'root', children: treeGenerator(file1, file2) };
+}
