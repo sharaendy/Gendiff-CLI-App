@@ -1,16 +1,5 @@
 import _ from 'lodash';
 
-const file1 = {
-  a: 1,
-  b: 2,
-  e: 4,
-};
-
-const file2 = {
-  b: 2,
-  c: 3,
-};
-
 export default function treeGenerator(file1, file2) {
   const file1Keys = Object.keys(file1);
   const file2Keys = Object.keys(file2);
@@ -20,7 +9,8 @@ export default function treeGenerator(file1, file2) {
     const value1 = file1[key];
     const value2 = file2[key];
 
-    if (!file2.hasOwnProperty(key)) {
+    if (!Object.prototype.hasOwnProperty.call(file2, key)) {
+      // если ключа нет во 2-ом файле
       return {
         key,
         type: 'deleted',
@@ -28,7 +18,8 @@ export default function treeGenerator(file1, file2) {
       };
     }
 
-    if (!file1.hasOwnProperty(key)) {
+    if (!Object.prototype.hasOwnProperty.call(file1, key)) {
+      // если ключа нет в 1-ом файле
       return {
         key,
         type: 'added',
@@ -36,7 +27,7 @@ export default function treeGenerator(file1, file2) {
       };
     }
 
-    if (_.isEqual(value1, value2)) {
+    if (!_.isEqual(value1, value2)) {
       return {
         key,
         type: 'changed',
@@ -53,4 +44,4 @@ export default function treeGenerator(file1, file2) {
   });
 }
 
-console.log(treeGenerator(file1, file2));
+// console.log(treeGenerator(file1, file2));
