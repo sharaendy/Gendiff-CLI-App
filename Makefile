@@ -1,11 +1,11 @@
 install:
 	npm ci
 
-lint:
-	npx eslint .
-
 link:
 	npm link
+
+lint:
+	npx eslint .
 
 publish:
 	npm publish --dry-run

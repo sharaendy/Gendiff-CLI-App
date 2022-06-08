@@ -1,4 +1,4 @@
-// import toStylish from './toStylish.js';
+import toStylish from './toStylish.js';
 // import toPlain from './toPlain.js';
 import toJson from './toJson.js';
 
