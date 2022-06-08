@@ -4,9 +4,7 @@ env:
 
 extends: 
   - 'airbnb-base'
-  # - 'plugin:jest/recommended'
-
-# parser: babel-eslint
+  - 'plugin:jest/recommended'
 
 parserOptions:
   ecmaVersion: latest
