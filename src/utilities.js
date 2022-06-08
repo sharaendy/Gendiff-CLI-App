@@ -1,3 +1,22 @@
-const getFormat = (fileName) => fileName.split('.')[1];
-const getFixturePath = (filename) => resolve(process.cwd(), filename);
-const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
+import { resolve, extname } from 'path';
+import { readFileSync } from 'fs';
+
+// возвращает абсолютный путь файла
+function getFilePath(file) {
+  return resolve(process.cwd(), file);
+}
+
+// возвращает содержимое файла
+function getFileContent(file) {
+  return readFileSync(getFilePath(file), 'utf-8')
+}
+
+// вовзращает формат файла без точки
+function getFileFormat(filePath) {
+  return extname(filePath).slice(1);
+}
+
+export { getFileContent, getFileFormat };
+
+// console.log(getFilePath('file1.json'))
+// console.log(JSON.parse(getFileContent('file1.json')))
