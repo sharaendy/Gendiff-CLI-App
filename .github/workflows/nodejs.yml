@@ -19,7 +19,7 @@ jobs:
     - name: code coverage 
       uses:  paambaati/codeclimate-action@v2.5.7
       env:
-          b2192ea459ae4c3cbf926de74a2ab11a90a6054586785c0a4aa9961ba2762cb7
+          CC_TEST_REPORTER_ID: b2192ea459ae4c3cbf926de74a2ab11a90a6054586785c0a4aa9961ba2762cb7
       with:
           coverageCommand: make test-coverage
           debug: true
