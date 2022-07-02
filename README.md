@@ -1,5 +1,5 @@
 #### Tests and Linter status:
-[![Actions Status](https://github.com/sharaendy/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/sharaendy/frontend-project-lvl2/actions)  [![Node CI](https://github.com/sharaendy/frontend-project-lvl2/actions/workflows/nodejs.yml/badge.svg)](https://github.com/sharaendy/frontend-project-lvl2/actions/workflows/nodejs.yml)
+[![Actions Status](https://github.com/sharaendy/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/sharaendy/frontend-project-lvl2/actions)  [![Node CI](https://github.com/sharaendy/frontend-project-lvl2/actions/workflows/nodejs.yml/badge.svg)](https://github.com/sharaendy/frontend-project-lvl2/actions/workflows/nodejs.yml)
 
 #### CodeClimate: Test Coverage and Maintainability:
 [![Test Coverage](https://api.codeclimate.com/v1/badges/9a557dced408d87e5cb1/test_coverage)](https://codeclimate.com/github/sharaendy/frontend-project-lvl2/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/9a557dced408d87e5cb1/maintainability)](https://codeclimate.com/github/sharaendy/frontend-project-lvl2/maintainability)
