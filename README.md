@@ -6,45 +6,45 @@
 
 
 
-## Установка
+## Installation
 
 - `git clone` https://github.com/sharaendy/frontend-project-lvl2
-- `make install` - *установить зависимости*
-- `make link` - *установить приложение 'gendiff'*
+- `make install` - *establish dependencies*
+- `make link` - *install the app 'gendiff'*
 
 
 
-## Описание
+## Description
 
-CLI-утилита сравнивает два конфигурационных файла с форматом **.json**, **.yaml** или **.yml**. Приложение принимает через командную строку два аргумента — пути до этих файлов (работает как с *относительными*, так и *абсолютными* путями) и выводит результат сравнения в указанном формате.  
+The CLI-utility compares two configuration files with the format **.json**, **.yaml** or **.yml**. The application takes two arguments on the command line - the paths to these files (it works both with *relative* and *absolute* paths) and outputs the result of the comparison in the specified format.   
 
-- #### Использование:
+- #### Using:
 
 ```bash
 gendiff [options] <filepath1> <filepath2>
 ```
 
-- #### Опции:
+- #### Options:
 
 ```bash
 -h, --help 
 ```
 
-​	выбрать формат: 
+​	select format: 
 
 ```bash
 -f, --format <format>
 ```
 
-​	доступные форматы:
+​	available formats:
 
 ```bash
-stylish (по умолчанию)
+stylish (default)
 plain
 json
 ```
 
-- #### Пример
+- #### Example
 
 ```bash
 gendiff -f stylish <filepath1> <filepath2>
@@ -52,53 +52,53 @@ gendiff -f stylish <filepath1> <filepath2>
 
 
 
-## Особенности
+## Features
 
-- Обеспечена кроссплатформенность;
-- Код построен в иммутабельном стиле;
-- Реализовано тестирование кода ( Jest );
-- На Codeclimate проверяется покрытие тестами, бейджик его отображает;
-- На Github Actions проверяются и стандарты кодирования (eslint airbnb) и прогоняются тесты;
-- Код намеренно (в учебных целях) построен на переменных, циклах, а так же функциях высшего порядка и рекурсии;
-- Внутреннее представление — это дерево, где каждый элемент — это узел, имеющий свой тип;
+- Crossplatform;
+- The code is built in an immutable style;
+- Implemented code testing ( Jest );
+- On Codeclimate the coverage is checked by tests, the badge displays it;
+- Github Actions checks coding standards (eslint airbnb) and runs tests;
+- The code is intentionally (for training purposes) built on variables, loops, as well as higher-order functions and recursion;
+- The internal representation is a tree, where each element is a node that has its own type;
 
 
 
-## Демонстрация
+## Demonstration
 
-##### 1. Сравнение "плоских" .json файлов (формат stylish);
+##### 1. Comparison of "flat" .json files (stylish format);
 
 [![asciicast](https://asciinema.org/a/0FRB4KTZ4pH4NY0BCDnC8Ljfj.svg)](https://asciinema.org/a/0FRB4KTZ4pH4NY0BCDnC8Ljfj)
 
-##### 2. Сравнение "плоских" .yaml и .yml файлов (формат stylish);
+##### 2. Comparison of "flat" .yaml and .yml files (format stylish);
 
 [![asciicast](https://asciinema.org/a/WlfEET07A0V07EGKQxjvZRfQL.svg)](https://asciinema.org/a/WlfEET07A0V07EGKQxjvZRfQL)
 
-##### 3. Сравнение многоуровневых .json  файлов (формат stylish);
+##### 3. Comparison of multi-level .json files (format stylish);
 
 [![asciicast](https://asciinema.org/a/Ux6R3fOdasYc9pedxtt5zG32u.svg)](https://asciinema.org/a/Ux6R3fOdasYc9pedxtt5zG32u)
 
-##### 4. Сравнение многоуровневых .yaml и .yml файлов (формат stylish);
+##### 4. Comparison of multi-level .yaml and .yml files (format stylish);
 
 [![asciicast](https://asciinema.org/a/Q6AAr3oWutGnCtpojGeeVRCxl.svg)](https://asciinema.org/a/Q6AAr3oWutGnCtpojGeeVRCxl)
 
-##### 5. Сравнение многоуровневых .json  файлов (формат plain);
+##### 5. Comparison of multi-level .json files (plain format);
 
 [![asciicast](https://asciinema.org/a/pyrL6wdh6sV31k1dj2maH2bQ1.svg)](https://asciinema.org/a/pyrL6wdh6sV31k1dj2maH2bQ1)
 
-##### 6. Сравнение многоуровневых .yaml и .yml файлов (формат plain);
+##### 6. Comparison of multi-level .yaml and .yml files (plain format);
 
 [![asciicast](https://asciinema.org/a/7sIhMiF82JPnBHZ6e5gfzrBui.svg)](https://asciinema.org/a/7sIhMiF82JPnBHZ6e5gfzrBui)
 
-##### 7. Сравнение многоуровневых .json  файлов (выходной формат json);
+##### 7. Comparison of multi-level .json files (json output format);
 
 [![asciicast](https://asciinema.org/a/BKBPCBRfMZf13bAvXkvuJ4mWU.svg)](https://asciinema.org/a/BKBPCBRfMZf13bAvXkvuJ4mWU)
 
-##### 8. Сравнение многоуровневых .yaml и .yml файлов (выходной формат json);
+##### 8. Comparison of multi-level .yaml and .yml files (json output format);
 
 [![asciicast](https://asciinema.org/a/egbO6AosrNFYzbQlT2u92GV4M.svg)](https://asciinema.org/a/egbO6AosrNFYzbQlT2u92GV4M)
 
-## Автор
+## Authored by
 
 Шараевский Андрей (sharaendy)
 
